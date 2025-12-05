@@ -1,0 +1,848 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://recos-six.vercel.app/integrations/">
+      
+      
+        <link rel="prev" href="../developer-docs/">
+      
+      
+        <link rel="next" href="../api-reference/">
+      
+      
+      <link rel="icon" href="../images/recos-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Integrations - Recos Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#integrations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Recos Technical Documentation" class="md-header__button md-logo" aria-label="Recos Technical Documentation" data-md-component="logo">
+      
+  <img src="../images/recos-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Recos Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integrations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Recos Technical Documentation" class="md-nav__button md-logo" aria-label="Recos Technical Documentation" data-md-component="logo">
+      
+  <img src="../images/recos-logo.png" alt="logo">
+
+    </a>
+    Recos Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How It Works
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#odoo-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Odoo Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-calendar-google-meet-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Calendar &amp; Google Meet Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assemblyai-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      AssemblyAI Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gemini-integration-ai-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gemini Integration (AI Reports)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-troubleshooting-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Troubleshooting &amp; Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      References &amp; Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Q/A Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code Standards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="integrations"><span style="font-weight: 1; font-size: 2.1em; color: #232f3e;">Integrations</span></h1>
+<p>Detailed documentation for integrating with Odoo, Google Calendar/Meet, AssemblyAI, and Gemini.<br />
+This guide covers setup, configuration, API usage, troubleshooting, and best practices.</p>
+<hr />
+<h2 id="odoo-integration"><span style="font-weight: 300; color: #8645e8;">Odoo Integration</span></h2>
+<p><strong>Overview:</strong><br />
+Integrate your platform with Odoo to fetch jobs, candidates, and manage company data.</p>
+<p><strong>Steps:</strong>
+1. <strong>Odoo Setup</strong>
+   - Obtain your Odoo instance URL (e.g., <code>https://your-odoo-instance.com</code>)
+   - Generate an API key from your Odoo account (Settings → API Keys).
+   - Make sure your Odoo user has the necessary access rights for jobs, candidates, and companies.</p>
+<ol>
+<li><strong>Connecting via API</strong></li>
+<li>Store credentials securely in <code>.env</code>:
+     <code>ODOO_URL=https://your-odoo-instance.com
+     ODOO_EMAIL=your@email.com
+     ODOO_API_KEY=yourapikey</code></li>
+<li>
+<p>Use API endpoints to connect and fetch data.
+     ```python
+     import requests</p>
+<p>url = f"{ODOO_URL}/api/jobs"
+ headers = {"Authorization": f"Bearer {ODOO_API_KEY}"}
+ response = requests.get(url, headers=headers)
+ print(response.json())
+ ```</p>
+</li>
+<li>
+<p><strong>Sample API Calls</strong></p>
+</li>
+<li><code>GET /odoo/jobs</code> – Fetch all jobs from Odoo.</li>
+<li>
+<p><code>GET /odoo/candidates</code> – Fetch all candidates.</p>
+</li>
+<li>
+<p><strong>Common Issues &amp; Solutions</strong></p>
+</li>
+<li><strong>401 Unauthorized:</strong> Double-check API key, user permissions.</li>
+<li><strong>Connection Error:</strong> Ensure Odoo server is running and accessible.</li>
+<li>
+<p><strong>Timeouts:</strong> Optimize endpoints, use pagination if available.</p>
+</li>
+<li>
+<p><strong>Best Practices</strong></p>
+</li>
+<li>Never log or expose API keys in error messages.</li>
+<li>Use environment variables for all sensitive data.</li>
+<li>Handle rate limiting and retries in your integration code.</li>
+</ol>
+<hr />
+<h2 id="google-calendar-google-meet-integration"><span style="font-weight: 300; color: #8645e8;">Google Calendar &amp; Google Meet Integration</span></h2>
+<p><strong>Overview:</strong><br />
+Integrate Google Calendar to schedule interviews and auto-generate Google Meet links.</p>
+<p><strong>Steps:</strong>
+1. <strong>Create Google Cloud Project</strong>
+   - Go to <a href="https://console.cloud.google.com/">Google Cloud Console</a>.
+   - Create a new project (e.g., “Recruitment Platform”).</p>
+<ol>
+<li><strong>Enable APIs</strong></li>
+<li>
+<p>In the project, enable:</p>
+<ul>
+<li>Google Calendar API</li>
+<li>Google People API (if you want to fetch attendee profiles)</li>
+<li>Google Meet integration comes with Calendar events</li>
+</ul>
+</li>
+<li>
+<p><strong>Create OAuth 2.0 Client Credentials</strong></p>
+</li>
+<li>Go to “APIs &amp; Services” → “Credentials”.</li>
+<li>Click <strong>Create Credentials</strong> → <strong>OAuth Client ID</strong>.</li>
+<li>Choose <strong>Web application</strong> and add your redirect URI (e.g., <code>https://your-domain.com/api/auth/google/callback/</code>).</li>
+<li>Download the <code>credentials.json</code> file and keep it <strong>secure</strong>.</li>
+<li>
+<p>Store client ID and secret in <code>.env</code>.</p>
+</li>
+<li>
+<p><strong>OAuth Flow Implementation</strong></p>
+</li>
+<li>On the backend (Python/Django), use libraries like <code>google-auth</code>, <code>google-api-python-client</code>.</li>
+<li>Redirect users to Google OAuth consent screen.</li>
+<li>After success, handle the callback, exchange the code for tokens, and store refresh tokens securely.</li>
+</ol>
+<p>```python
+   from google_auth_oauthlib.flow import Flow</p>
+<p>flow = Flow.from_client_secrets_file(
+       'credentials.json',
+       scopes=['https://www.googleapis.com/auth/calendar'],
+       redirect_uri='https://your-domain.com/api/auth/google/callback/'
+   )
+   authorization_url, state = flow.authorization_url(access_type='offline', prompt='consent')
+   ```</p>
+<ol>
+<li><strong>Creating Calendar Events &amp; Meet Links</strong></li>
+<li>
+<p>Use the Google Calendar API to create events with <code>conferenceData</code> for Meet links:
+     <code>python
+     event = {
+         'summary': 'Interview',
+         'start': {'dateTime': '2025-10-02T10:00:00-07:00', 'timeZone': 'America/Los_Angeles'},
+         'end': {'dateTime': '2025-10-02T11:00:00-07:00', 'timeZone': 'America/Los_Angeles'},
+         'attendees': [{'email': 'candidate@example.com'}],
+         'conferenceData': {
+             'createRequest': {'requestId': 'sample123'}
+         }
+     }
+     created_event = calendar_service.events().insert(
+         calendarId='primary',
+         body=event,
+         conferenceDataVersion=1
+     ).execute()
+     meet_link = created_event['hangoutLink']</code></p>
+</li>
+<li>
+<p><strong>Sample API Calls</strong></p>
+</li>
+<li><code>POST /calendar/events</code> – Create interview event and Meet link.</li>
+<li>
+<p><code>GET /calendar/meets</code> – List all Meet links.</p>
+</li>
+<li>
+<p><strong>Common Issues &amp; Solutions</strong></p>
+</li>
+<li><strong>Redirect URI mismatch:</strong> Make sure the URI in Google Console matches your app’s callback.</li>
+<li><strong>Missing conferenceData:</strong> Pass <code>conferenceDataVersion=1</code> when creating events.</li>
+<li><strong>Token expired:</strong> Implement token refresh logic.</li>
+<li>
+<p><strong>Invalid credentials:</strong> Check your <code>credentials.json</code> file and <code>.env</code> settings.</p>
+</li>
+<li>
+<p><strong>Security &amp; Best Practices</strong></p>
+</li>
+<li>Never expose <code>credentials.json</code> publicly.</li>
+<li>Store tokens encrypted.</li>
+<li>
+<p>Use HTTPS for all OAuth flows.</p>
+</li>
+<li>
+<p><strong>Error Handling</strong></p>
+</li>
+<li>Log errors and monitor via Sentry or your logging system.</li>
+<li>Always handle exceptions for network/API calls.</li>
+</ol>
+<hr />
+<h2 id="assemblyai-integration"><span style="font-weight: 300; color: #8645e8;">AssemblyAI Integration</span></h2>
+<p><strong>Overview:</strong><br />
+Use AssemblyAI to transcribe interviews in real-time and provide transcripts for later processing.</p>
+<p><strong>Steps:</strong>
+1. <strong>Sign Up and Get API Key</strong>
+   - Register at <a href="https://www.assemblyai.com/">AssemblyAI</a> and create an account.
+   - Find your API key in your dashboard.</p>
+<ol>
+<li><strong>Store API Key</strong></li>
+<li>
+<p>Store your API key in <code>.env</code>:
+     <code>ASSEMBLYAI_API_KEY=your_api_key</code></p>
+</li>
+<li>
+<p><strong>Upload Audio &amp; Start Transcription</strong></p>
+</li>
+<li>
+<p>Send audio file to AssemblyAI and start transcription:
+     ```python
+     import requests</p>
+<p>headers = {'authorization': ASSEMBLYAI_API_KEY}
+ response = requests.post('https://api.assemblyai.com/v2/upload', files={'file': open('audio.mp3', 'rb')}, headers=headers)
+ audio_url = response.json()['upload_url']</p>
+<p>transcript_response = requests.post(
+     'https://api.assemblyai.com/v2/transcript',
+     json={'audio_url': audio_url},
+     headers=headers
+ )
+ transcript_id = transcript_response.json()['id']
+ ```</p>
+</li>
+<li>
+<p><strong>Get Transcription Results</strong></p>
+</li>
+<li>
+<p>Poll the API until transcription is complete:
+     <code>python
+     import time
+     while True:
+         res = requests.get(f'https://api.assemblyai.com/v2/transcript/{transcript_id}', headers=headers)
+         status = res.json()['status']
+         if status == 'completed': break
+         elif status == 'failed': raise Exception('Transcription failed')
+         time.sleep(5)
+     transcript_text = res.json()['text']</code></p>
+</li>
+<li>
+<p><strong>Common Issues &amp; Solutions</strong></p>
+</li>
+<li><strong>Large files:</strong> Use chunked upload if audio is &gt;100MB.</li>
+<li><strong>API limits:</strong> Monitor usage and handle rate limiting.</li>
+<li>
+<p><strong>Audio format errors:</strong> Use standard formats (mp3, wav).</p>
+</li>
+<li>
+<p><strong>Security &amp; Best Practices</strong></p>
+</li>
+<li>Never expose your API key.</li>
+<li>Delete audio files after processing if not needed.</li>
+</ol>
+<hr />
+<h2 id="gemini-integration-ai-reports"><span style="font-weight: 300; color: #8645e8;">Gemini Integration (AI Reports)</span></h2>
+<p><strong>Overview:</strong><br />
+Use Gemini (Google AI) to analyze interviews, extract sentiments, and generate candidate ratings and recommendations.</p>
+<p><strong>Steps:</strong>
+1. <strong>Gemini API Access</strong>
+   - Sign up for Gemini or Google AI platform and enable the Gemini API.
+   - Obtain an API key and set usage quotas.</p>
+<ol>
+<li><strong>Store API Key</strong></li>
+<li>
+<p>Add your Gemini API key to <code>.env</code>:
+     <code>GEMINI_API_KEY=your_api_key</code></p>
+</li>
+<li>
+<p><strong>Send Data for AI Analysis</strong></p>
+</li>
+<li>Format interview transcription and candidate data.</li>
+<li>
+<p>Send to Gemini API for report generation:
+     ```python
+     import requests</p>
+<p>headers = {"Authorization": f"Bearer {GEMINI_API_KEY}"}
+ data = {"interview_text": transcript_text, "candidate_profile": {...}}
+ response = requests.post("https://gemini.googleapis.com/v1/analyze", json=data, headers=headers)
+ report = response.json()
+ ```</p>
+</li>
+<li>
+<p><strong>Handle Response</strong></p>
+</li>
+<li>Parse AI report, extract recommendations, strengths, gaps, and scores.</li>
+<li>
+<p>Store and display in your dashboard.</p>
+</li>
+<li>
+<p><strong>Common Issues &amp; Solutions</strong></p>
+</li>
+<li><strong>API errors:</strong> Validate data format and authentication.</li>
+<li><strong>Quota exceeded:</strong> Monitor usage and request more quota if needed.</li>
+<li>
+<p><strong>Latency:</strong> Gemini AI reports may take several seconds; show loading indicator.</p>
+</li>
+<li>
+<p><strong>Security &amp; Best Practices</strong></p>
+</li>
+<li>Never expose your Gemini API key.</li>
+<li>Validate and sanitize all data sent to AI APIs.</li>
+</ol>
+<hr />
+<h2 id="general-troubleshooting-best-practices"><span style="font-weight: 300; color: #8645e8;">General Troubleshooting &amp; Best Practices</span></h2>
+<ul>
+<li>Always use <code>.env</code> for sensitive credentials and never commit them.</li>
+<li>Use HTTPS for all API and OAuth flows.</li>
+<li>Monitor logs (Django, Vercel, Heroku, Sentry) for errors and usage spikes.</li>
+<li>Handle errors gracefully and inform users of next steps.</li>
+<li>Keep all API libraries up to date for security and compatibility.</li>
+<li>Regularly test integrations with sandbox/test accounts before deploying to production.</li>
+</ul>
+<hr />
+<h2 id="references-further-reading"><span style="font-weight: 300; color: #8645e8;">References &amp; Further Reading</span></h2>
+<ul>
+<li><a href="https://www.odoo.com/documentation/">Odoo API Docs</a></li>
+<li><a href="https://developers.google.com/calendar/api/quickstart/python">Google Calendar API Quickstart</a></li>
+<li><a href="https://developers.google.com/identity/protocols/oauth2">Google OAuth Docs</a></li>
+<li><a href="https://www.assemblyai.com/docs/">AssemblyAI API Docs</a></li>
+<li><a href="https://ai.google.dev/gemini">Gemini (Google AI) Docs</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.expand", "toc.integrate", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
